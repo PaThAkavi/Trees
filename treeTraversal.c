@@ -7,11 +7,23 @@ typedef struct Node {
     struct Node* right;
 }node;
 
+void display(node* root){
+    if(root){
+        printf("%d\n", root->data);
+    } else{
+        return;
+    }
+}
+
 int main(){
     node* newnode = (node*)malloc(sizeof(node));
-    newnode->data = 30;
+    int r;
+    printf("Enter the root node:\n");
+    scanf("%d", &r);
+    newnode->data = r;
     newnode->left = NULL;
     newnode->right =  NULL;
-    printf("%d\n", newnode->data);
+
+    display(newnode);
     return 0;
 }
