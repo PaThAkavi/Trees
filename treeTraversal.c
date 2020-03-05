@@ -7,6 +7,8 @@ typedef struct Node {
     struct Node* right;
 }node;
 
+node* root = NULL;
+
 void display(node* root){
     if(root){
         printf("%d\n", root->data);
@@ -23,7 +25,7 @@ int main(){
     newnode->data = r;
     newnode->left = NULL;
     newnode->right =  NULL;
-
+    root = newnode;
     display(newnode);
     return 0;
 }
