@@ -27,14 +27,14 @@ node* insert(node* root, int val){
 void inorder(node* root){
     if(root){
         inorder(root->left);
-        printf("%d\n", root->data);
+        printf("%d ", root->data);
         inorder(root->right);
     }
 }
 
 void preorder(node* root){
     if(root){
-        printf("%d\n", root->data);
+        printf("%d ", root->data);
         preorder(root->left);
         preorder(root->right);
     }
@@ -44,7 +44,7 @@ void postorder(node* root){
     if(root){
         postorder(root->left);
         postorder(root->right);
-        printf("%d\n", root->data);
+        printf("%d ", root->data);
     }
 }
 
@@ -71,5 +71,10 @@ int main(){
         insert(root, data);
     }
     inorder(root);
+    printf("\n");
+    preorder(root);
+    printf("\n");
+    postorder(root);
+    printf("\n");
     return 0;
 }
