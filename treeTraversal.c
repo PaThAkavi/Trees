@@ -41,11 +41,19 @@ void display(node* root){
 }
 
 int main(){
-    int r;
+    int r, num;
+    printf("How many nodes do you want in your tree?\n");
+    scanf("%d", &num);
     printf("Enter the root node:\n");
     scanf("%d", &r);
     node* root = (node*)malloc(sizeof(node));
     insert(root, r);
+    for(int i = 0; i < num; i++){
+        int data;
+        printf("Enter node #%d:\n", i+2);
+        scanf("%d", &data);
+        insert(root, data);
+    }
     inorder(root);
     return 0;
 }
