@@ -32,6 +32,22 @@ void inorder(node* root){
     }
 }
 
+void preorder(node* root){
+    if(root){
+        printf("%d\n", root->data);
+        preorder(root->left);
+        preorder(root->right);
+    }
+}
+
+void postorder(node* root){
+    if(root){
+        postorder(root->left);
+        postorder(root->right);
+        printf("%d\n", root->data);
+    }
+}
+
 void display(node* root){
     if(root){
         printf("%d ", root->data);
