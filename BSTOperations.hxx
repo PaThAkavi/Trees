@@ -73,9 +73,11 @@ int main(){
 
     ll n, i, val, parent;
     char op;
+    cout << "Enter number of operations to be performed:\n";
     cin >> n;
     node* root = NULL;
     for(i = 0; i < n; i++){
+        cout << "Please specify operation(i or d) and the node value:\n";
         cin >> op >> val;
         if(op == 'i'){
             root = insert(root, val);
